@@ -1,11 +1,18 @@
-PROBLEM 1
+/* PROBLEM 1
 Linked List
 Implement an algorithm to delete a node in the middle of a singly linked list, given only access
 to that node.
 EXAMPLE
 Input: the node c from the linked list a->b->c->d->e
 Result: nothing is returned, but the new linked list looks like a- >b- >d->e 
- 
+
+*/
+/*
+Steps:-
+1st> Approach is tricky and simple
+2nd> Copy the value of next node to the node which you want to delete
+3rd> Delete the next node*/
+
  import java.util.Scanner;
  class LinkedListDeleteQ1{
 	    @SuppressWarnings("unchecked") 
@@ -54,19 +61,22 @@ Result: nothing is returned, but the new linked list looks like a- >b- >d->e
 class LinkedList <T>{
     Node head;
     class Node{
-        Node next;
+        
+	Node next;
         T value;   
         Node(T value){this.value = value;}
     } 
 	public boolean isEmpty(){
         return head==null;
     }
+	
     public void add(T value){
         if(head==null){head = new Node(value); return;}
         Node t = head;
         while(t.next!=null){t = t.next;}
         t.next = new Node(value); 
     }
+	
     public String toString(){
         StringBuilder bf = new StringBuilder();
         Node t = head;
