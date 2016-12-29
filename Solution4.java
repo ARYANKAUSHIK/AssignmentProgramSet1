@@ -1,5 +1,4 @@
-/*PROBLEM 4
-Ladder - Count the number of different ways of climbing to the top of a ladder
+/*Ladder - Count the number of different ways of climbing to the top of a ladder
 You have to climb up a ladder. The ladder has exactly N rungs, numbered from 1 to N. With each step, you
 can ascend by one or two rungs. More precisely:
 ● with your first step you can stand on rung 1 or 2,
@@ -46,8 +45,10 @@ required for input arguments).
 Elements of input arrays can be modified.
 */
 
-// A java program to count number of ways to reach n'th stair when
-// A person can climb 1 or 2 stairs at a time means here B = 2, By Creating public int[] solution(int[] A, int[] B); 
+/* Solution : 
+A java program to count number of ways to reach n'th stair when
+A person can climb 1 or 2 stairs at a time
+*/
 import java.util.Scanner;
 class Solution4
 {
