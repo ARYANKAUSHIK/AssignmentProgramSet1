@@ -1,3 +1,37 @@
+/*PROBLEM 2
+Tower of Hanoi
+In the classic problem of the Towers of Hanoi, you have 3 towers and N disks of different sizes
+which can slide onto any tower. The puzzle starts with disks sorted in ascending order of size
+from top to bottom (i.e., each disk sits on top of an even larger one). You have the following
+constraints:
+(1) Only one disk can be moved at a time.
+(2) A disk is slid off the top of one tower onto the next tower.
+(3) A disk can only be placed on top of a larger disk.
+Write a program to move the disks from the first tower to the last using stacks.*/
+
+/* ==>  The steps to follow are −
+
+Step 1 − Move n-1 disks from source to aux
+Step 2 − Move nth disk from source to dest
+Step 3 − Move n-1 disks from aux to dest
+A recursive algorithm for Tower of Hanoi can be driven as follows −
+
+START
+Procedure Hanoi(disk, source, dest, aux)
+
+   IF disk == 0, THEN
+      move disk from source to dest             
+   ELSE
+      Hanoi(disk - 1, source, aux, dest)     // Step 1
+      move disk from source to dest          // Step 2
+      Hanoi(disk - 1, aux, dest, source)     // Step 3
+   END IF
+   
+END Procedure
+STOP
+*/
+
+
 import java.util.*;
 public class TowerOHanoi2 {
      private static ArrayList<Stack<Integer>> stacks = new ArrayList<>(3);
